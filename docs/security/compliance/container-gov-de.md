@@ -230,7 +230,7 @@ system.activationScripts.removeSensitiveFiles = ''
 
 ```nix
 # Use stable nixpkgs channel
-nixpkgs.channel = "nixos-23.11";
+nixpkgs.channel = "nixos-24.11";
 
 # Update script
 updateScript = pkgs.writeScriptBin "update-nixpkgs" ''
@@ -719,7 +719,7 @@ strictestProfile = securityHardening // {
 # flake.nix
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     opendesk-nix.url = "github:opendesk-edu/opendesk-nix";
   };
   

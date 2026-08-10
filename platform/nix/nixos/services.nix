@@ -352,7 +352,7 @@ let
       uid = 1000;
     };
     opencloud = {
-      package = null;  # Not in nixos-23.11
+      package = null;  # Not in nixos-24.11
       version = "7.3.0";
       port = 9200;
       type = "web";
@@ -360,7 +360,7 @@ let
       uid = 1000;
     };
     open-webui = {
-      package = null;  # Not in nixos-23.11
+      package = null;  # Not in nixos-24.11
       version = "0.11.0";
       port = 3000;
       type = "web";
@@ -426,7 +426,7 @@ let
       uid = 1000;
     };
     stalwart = {
-      package = null;  # Not in nixos-23.11
+      package = null;  # Not in nixos-24.11
       version = "0.15.5";
       port = 443;
       type = "web";
@@ -638,7 +638,7 @@ let
       uid = 1000;
     };
     open-xchange = {
-      package = null;  # Not in nixos-23.11
+      package = null;  # Not in nixos-24.11
       version = "8.0.0";
       port = 8009;
       type = "web";

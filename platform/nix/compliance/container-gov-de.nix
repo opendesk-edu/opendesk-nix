@@ -164,7 +164,7 @@ let
   checkBG5 = { image }:
     let
       # Check if using pinned nixpkgs channel (not unstable)
-      nixpkgsChannel = "nixos-23.11";  # Should come from flake
+      nixpkgsChannel = "nixos-24.11";  # Should come from flake
       stableChannel = nixpkgsChannel != "nixos-unstable" && nixpkgsChannel != "master";
       
       # Check if update script exists
@@ -178,7 +178,7 @@ let
       details = "Basisimages und Komponenten müssen regelmäßig auf den neuesten Stand gesetzt werden.";
       passed = stableChannel && hasUpdateScript;
       recommendations = [
-        "Use stable nixpkgs channels (e.g., nixos-23.11)"
+        "Use stable nixpkgs channels (e.g., nixos-24.11)"
         "Set up automated dependency updates"
         "Schedule monthly full rebuilds"
       ];

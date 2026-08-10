@@ -113,7 +113,7 @@ jobs:
         uses: cachix/install-nix-action@v26
         with:
           install_url: https://releases.nixos.org/nix/nix-2.20.1/install
-          nix_path: nixpkgs=channel:nixos-23.11
+          nix_path: nixpkgs=channel:nixos-24.11
           extra_nix_config: |
             experimental-features = nix-command flakes ca-derivations
             trusted-substituters = https://cache.nixos.org https://opendesk.cache
@@ -152,7 +152,7 @@ jobs:
       - name: Install Nix
         uses: cachix/install-nix-action@v26
         with:
-          nix_path: nixpkgs=channel:nixos-23.11
+          nix_path: nixpkgs=channel:nixos-24.11
           extra_nix_config: |
             experimental-features = nix-command flakes ca-derivations
       

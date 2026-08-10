@@ -174,7 +174,7 @@ jobs:
       # Install Nix (DevGuard-style)
       - uses: cachix/install-nix-action@v22
         with:
-          nix_path: nixpkgs=channel:nixos-23.11
+          nix_path: nixpkgs=channel:nixos-24.11
       
       - name: Enable Flakes
         run: |
@@ -757,7 +757,7 @@ let
         "nix kri-env" = {
           enable = true;
           nixpkgs = {
-            channel = "nixos-23.11";
+            channel = "nixos-24.11";
             sha256 = "0000000000000000000000000000000000000000000000000000";
           };
         };

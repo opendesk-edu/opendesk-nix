@@ -230,7 +230,7 @@ system.activationScripts.removeSensitiveFiles = ''
 
 **Update Strategy**:
 
-- Stable channel: `nixos-23.11`
+- Stable channel: `nixos-24.11`
 - Security updates: Daily via CI/CD
 - Full rebuilds: Monthly
 - Update script: `scripts/container-gov-de/update-nixpkgs.sh`
@@ -238,7 +238,7 @@ system.activationScripts.removeSensitiveFiles = ''
 **Verification**:
 ```bash
 nix-channel --list
-# Shows: nixpkgs https://nixos.org/channels/nixos-23.11
+# Shows: nixpkgs https://nixos.org/channels/nixos-24.11
 ```
 
 ---

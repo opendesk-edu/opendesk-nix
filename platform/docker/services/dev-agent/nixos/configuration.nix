@@ -47,5 +47,5 @@
   services.openssh.enable = false;
 
   # System state version for reproducibility
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.11";
 }

@@ -6,7 +6,7 @@
   description = "openDesk NixOS infrastructure with DevGuard security patterns";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     
     # Flake utilities
     flake-utils.url = "github:numtide/flake-utils";
