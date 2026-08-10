@@ -156,10 +156,10 @@ in [
 
 ## See Also
 
-- [../../lib/k8s.nix](../../lib/k8s.nix) - Kubernetes library
-- [../../lib/security.nix](../../lib/security.nix) - Security profiles
-- [../../lib/registry.nix](../../lib/registry.nix) - Registry support
-- [../../lib/sbom.nix](../../lib/sbom.nix) - SBOM generation
+- [../../platform/nix/k8s.nix](../../platform/nix/k8s.nix) - Kubernetes library
+- [../../platform/nix/security.nix](../../platform/nix/security.nix) - Security profiles
+- [../../platform/nix/registry.nix](../../platform/nix/registry.nix) - Registry support
+- [../../platform/nix/sbom.nix](../../platform/nix/sbom.nix) - SBOM generation
 - [../../OPENSPEC.md](../../OPENSPEC.md) - Full specification
 
 ---

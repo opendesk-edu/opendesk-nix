@@ -359,19 +359,19 @@ nix develop -c opendesk-nix#postgresql
 
 ```bash
 # Test security-scanning.nix syntax
-nix-instantiate -E 'import ./lib/security-scanning.nix { pkgs = import <nixpkgs> { }; }'
+nix-instantiate -E 'import ./platform/nix/security-scanning.nix { pkgs = import <nixpkgs> { }; }'
 
 # Test registry.nix syntax
-nix-instantiate -E 'import ./lib/registry.nix { pkgs = import <nixpkgs> { }; }'
+nix-instantiate -E 'import ./platform/nix/registry.nix { pkgs = import <nixpkgs> { }; }'
 
 # Test compliance.nix syntax
-nix-instantiate -E 'import ./lib/compliance.nix { pkgs = import <nixpkgs> { }; }'
+nix-instantiate -E 'import ./platform/nix/compliance.nix { pkgs = import <nixpkgs> { }; }'
 
 # Test dev.nix syntax
-nix-instantiate -E 'import ./lib/dev.nix { pkgs = import <nixpkgs> { }; }'
+nix-instantiate -E 'import ./platform/nix/dev.nix { pkgs = import <nixpkgs> { }; }'
 
 # Test integrated-devguard.nix syntax
-nix-instantiate -E 'import ./lib/integrated-devguard.nix { pkgs = import <nixpkgs> { }; }'
+nix-instantiate -E 'import ./platform/nix/integrated-devguard.nix { pkgs = import <nixpkgs> { }; }'
 ```
 
 ### Build All Images

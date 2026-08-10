@@ -1101,7 +1101,7 @@ cd /home/weissto_local/git/opendesk_git/opendesk-nix
 ```nix
 # In your existing flake.nix, add to checks:
 checks = {
-  inherit (import ./lib/security-scanning.nix { inherit pkgs; })
+  inherit (import ./platform/nix/security-scanning.nix { inherit pkgs; })
     fullSecurityScan
     ;
   

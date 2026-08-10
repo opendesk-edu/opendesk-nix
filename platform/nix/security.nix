@@ -14,7 +14,7 @@
 # - OpenDesk security standards
 # 
 # Usage:
-#   security = import ./lib/security.nix { inherit pkgs lib; };
+#   security = import ./security.nix { inherit pkgs lib; };
 #   
 #   # Apply security to a container
 #   security.applySecurity { package = myPackage; profile = "database"; }

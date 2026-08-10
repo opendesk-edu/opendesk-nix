@@ -1,7 +1,7 @@
 # Library Files Syntax Fix - Complete
 
 ## Summary
-Fixed all invalid Nix syntax issues in `opendesk-nix/lib/*.nix` and `opendesk-nix/lib/*/*.nix` files.
+Fixed all invalid Nix syntax issues in `opendesk-ni./platform/nix/*.nix` and `opendesk-ni./platform/nix/*/*.nix` files.
 
 ## Changes Made
 
@@ -51,14 +51,14 @@ in { inherit mkImage; }
 
 Updated 75 service files in `docker/services/*/nixos/default.nix`:
 - Replaced `import (builtins.fetchGit { url = "https://github.com/dockernix/docks.nix" })` 
-  with `import ../../../../../opendesk-nix/lib/docks.nix`
+  with `import ../../../../../opendesk-ni./platform/nix/docks.nix`
 - Fixed overlay import paths from `../../../../../overlays/opendesk.nix` 
   to `../../../../../opendesk-nix/overlays/opendesk.nix`
 
 ### 4. Updated flake.nix
 
 - Removed non-existent inputs: `dockernix`, `sops-nix`, `cosign`
-- Updated outputs to use local `import ./lib/docks.nix { inherit pkgs; }` instead of `dockernix.lib.${system}`
+- Updated outputs to use local `import ./platform/nix/docks.nix { inherit pkgs; }` instead of `dockernix.lib.${system}`
 - Removed dockernix, sops-nix, cosign from outputs parameter list
 - Removed ~50 orphaned service names at end of file
 
@@ -89,9 +89,9 @@ The library files now contain minimal stubs. To restore full functionality:
 ## Files Modified
 
 - `opendesk-nix/flake.nix` - Removed non-existent inputs, fixed docks import
-- `opendesk-nix/lib/*.nix` (12 files) - Replaced with minimal stubs
-- `opendesk-nix/lib/nixos/*.nix` (3 files) - Replaced with minimal stubs
-- `opendesk-nix/lib/docks.nix` - NEW: Local replacement for dockernix/docks.nix
+- `opendesk-ni./platform/nix/*.nix` (12 files) - Replaced with minimal stubs
+- `opendesk-ni./platform/nix/nixos/*.nix` (3 files) - Replaced with minimal stubs
+- `opendesk-ni./platform/nix/docks.nix` - NEW: Local replacement for dockernix/docks.nix
 - `opendesk-nix/docker/services/*/nixos/default.nix` (75 files) - Updated import paths
 
 ## Statistics
