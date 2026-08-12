@@ -20,6 +20,11 @@
     nixpkgs,
     flake-utils,
     treefmt-nix,
+    
+    # Phase 2: Binary cache modules
+    attic-server = import ./modules/attic-server.nix;
+    binary-cache-client = import ./modules/binary-cache-client.nix;
+    post-build-hook = import ./modules/post-build-hook.nix;
     ...
   } @inputs:
     flake-utils.lib.eachDefaultSystem (system:
@@ -87,6 +92,11 @@
         
         # Code quality (best practices from ~/git/nix-best-practices)
         treefmtEval = inputs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
+        
+        # Phase 2: Binary cache modules
+        atticServer = import ./modules/attic-server.nix;
+        binaryCacheClient = import ./modules/binary-cache-client.nix;
+        postBuildHook = import ./modules/post-build-hook.nix;
       in rec {
         # ======================================================================
         # FORMATTER - Automated code formatting (best practices)
@@ -102,6 +112,9 @@
           
           # Basic integration test
           integration = pkgs.testers.runNixOSTest ./tests/integration.nix;
+          
+          # Phase 2: Binary cache tests
+          attic-server = pkgs.testers.runNixOSTest ./tests/attic-server.nix;
         };
         
         # ======================================================================
