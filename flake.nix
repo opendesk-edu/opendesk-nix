@@ -93,6 +93,10 @@
         # Code quality (best practices from ~/git/nix-best-practices)
         treefmtEval = inputs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
         
+        # Phase 3: Appliance image modules
+        applianceImage = import ./modules/appliance-image.nix;
+        k3sNodeConfig = import ./configurations/k3s-node.nix;
+        
         # Phase 2: Binary cache modules
         atticServer = import ./modules/attic-server.nix;
         binaryCacheClient = import ./modules/binary-cache-client.nix;
@@ -112,6 +116,9 @@
           
           # Basic integration test
           integration = pkgs.testers.runNixOSTest ./tests/integration.nix;
+          
+          # Phase 3: Appliance image tests
+          appliance-image = pkgs.testers.runNixOSTest ./tests/appliance-image.nix;
           
           # Phase 2: Binary cache tests
           attic-server = pkgs.testers.runNixOSTest ./tests/attic-server.nix;
