@@ -55,3 +55,17 @@ See [SECURITY_POLICY.md](docs/security/security-policy.md) for security guidelin
 ## 📄 License
 
 See [LICENSE](LICENSE) for details.
+
+---
+
+## ⚠️ Repo-line note (2026-08-15)
+
+Two divergent `opendesk-nix` repositories exist; **this one is the research/staging line**:
+
+| Repo | Role | HEAD |
+|---|---|---|
+| `opendesk-edu/opendesk-nix` (**this**) | **Research / staging** — Phase 2–5 NixOS appliance images, systemd-sysupdate A/B OTA, Attic binary cache, remote builders (`DEPLOYMENT-READY.md`). Not deployed. | `main` (this branch) |
+| `tobias-weiss-ai-xr/opendesk-nix` | **Production / cluster ops** — SCS K3s platform (intercom-service/OIDC, sealed secrets, sops, CI). The `umr` mirror on opencode.de tracks this line. | `main` (active) |
+
+**Merge decision:** kept separate (a merge would conflict on `flake.nix` / `README.md` / `.sops.yaml`; experimental content is not wanted in the production repo). Port research findings selectively; do not merge wholesale.
+
